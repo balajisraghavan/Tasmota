@@ -5,6 +5,15 @@
 //download .pioenvs/tasmota/firmware.bin
 //lots of conflicts for i2c sensor addresses. easier to just include ones needed and build everytime
 
+//build using gitpod to avoid lib cache preventing config changes from being picked up. else 
+//rm -rf .cache .pioenvs
+//restart visual studio code
+//platformio run -t clean && platformio run -e tasmota
+//esptool.py --port /dev/tty.usbserial-146110  --baud 1000000  write_flash -fm dio 0x00000 .pioenvs/tasmota/firmware.bin
+//esptool.py --chip esp32 --port /dev/tty.SLAB_USBtoUART --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dout --flash_freq 40m --flash_size detect 0x1000 
+//miniterm.py /dev/tty.SLAB_USBtoUART 115200
+
+//INCLUDES ALL IR drivers from platform.io. build nearing 1m will result in build breaking. increase it to 4m then. else try downgrade to tasmota minimal to do OTA
 
 #ifndef USE_DISPLAY
 #define USE_DISPLAY
