@@ -284,7 +284,7 @@ void ZbSendReportWrite(const JsonObject &val_pubwrite, uint16_t device, uint16_t
       ResponseCmndChar_P(PSTR("No more than one cluster id per command"));
       return;
     }
-    
+
     // ////////////////////////////////////////////////////////////////////////////////
     // Split encoding depending on message
     if (operation != ZCL_CONFIGURE_REPORTING) {
@@ -795,7 +795,7 @@ void ZbBindUnbind(bool unbind) {    // false = bind, true = unbind
   if (nullptr != &val_cluster) {
     cluster = strToUInt(val_cluster);   // first convert as number
     if (0 == cluster) {
-      zigbeeFindAttributeByName(val_cluster.as<const char*>(), &cluster, nullptr, nullptr, nullptr);
+      zigbeeFindAttributeByName(val_cluster.as<const char*>(), &cluster, nullptr, nullptr);
     }
   }
 
@@ -1482,6 +1482,12 @@ bool Xdrv23(uint8_t function)
       case FUNC_WEB_SENSOR:
         ZigbeeShow(false);
         break;
+#ifdef USE_ZIGBEE_EZSP
+      // GUI xmodem
+      case FUNC_WEB_ADD_HANDLER:
+        Webserver->on("/" WEB_HANDLE_ZIGBEE_XFER, HandleZigbeeXfer);
+        break;
+#endif  // USE_ZIGBEE_EZSP
 #endif  // USE_WEBSERVER
       case FUNC_PRE_INIT:
         ZigbeeInit();
