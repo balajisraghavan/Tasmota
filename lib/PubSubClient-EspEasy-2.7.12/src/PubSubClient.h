@@ -22,11 +22,12 @@
 #endif
 
 // MQTT_MAX_PACKET_SIZE : Maximum packet size
-#ifndef MQTT_MAX_PACKET_SIZE
+// #ifndef MQTT_MAX_PACKET_SIZE
 //#define MQTT_MAX_PACKET_SIZE 128
 //#define MQTT_MAX_PACKET_SIZE 1000   // Tasmota v5.11.1c
-#define MQTT_MAX_PACKET_SIZE 1200   // Tasmota v8.1.0.8
-#endif
+//balaji - overrides from user  config override not picked up here since its espeasy driver in lib folder. for changes, make here and run platformio run -t clean
+#define MQTT_MAX_PACKET_SIZE 5700   // Tasmota v8.1.0.8
+// #endif
 
 // MQTT_KEEPALIVE : keepAlive interval in Seconds
 // Keepalive timeout for default MQTT Broker is 10s

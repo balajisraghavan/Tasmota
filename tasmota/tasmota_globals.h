@@ -133,7 +133,7 @@ String EthernetMacAddress(void);
 #endif
 
 #ifndef MQTT_MAX_PACKET_SIZE
-#define MQTT_MAX_PACKET_SIZE        1200       // Bytes
+#define MQTT_MAX_PACKET_SIZE        5700       // Bytes
 #endif
 #ifndef MQTT_KEEPALIVE
 #define MQTT_KEEPALIVE              30         // Seconds

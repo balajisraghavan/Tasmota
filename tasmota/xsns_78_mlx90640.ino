@@ -41,6 +41,10 @@
 
 #define XSNS_78 78
 
+const uint8_t TRIM_PIXEL_COLUMNS_CNT = 0;        // image crop. if 2, 2 layers of the outermost pixels are discarded
+const uint8_t POLL_INTERVAL_SEC = 2;             //data refresh rate esp for UI. mqtt reporting is teleperiod
+const int SENSOR_VAL_STR_LEN = 24 * 32 * 7 + 2;  // chars + [] - one comma + last null ch
+
 Adafruit_MLX90640 mlx;
 uint8_t mlx_ready;
 float frame[32 * 24];  // buffer for full frame of temperatures
@@ -48,9 +52,6 @@ uint8_t elasped_sec = 0;
 char result[SENSOR_VAL_STR_LEN];  //[-100.1,] , no comma for 1 noumber
 char max_temp_str[6];
 
-const uint8_t TRIM_PIXEL_COLUMNS_CNT = 0;        // image crop. if 2, 2 layers of the outermost pixels are discarded
-const uint8_t POLL_INTERVAL_SEC = 5;             //data refresh rate esp for UI. mqtt reporting is teleperiod
-const int SENSOR_VAL_STR_LEN = 24 * 32 * 7 + 2;  // chars + [] - one comma + last null ch
 
 void MLX90640_Init() {
     AddLog_P(LOG_LEVEL_DEBUG, PSTR("MLX90640: Start of driver init"));
@@ -65,7 +66,7 @@ void MLX90640_Init() {
         return;
     }
     mlx.setResolution(MLX90640_ADC_18BIT);
-    mlx.setRefreshRate(MLX90640_1_HZ);
+    mlx.setRefreshRate(MLX90640_2_HZ);
     // case MLX90640_0_5_HZ: Serial.println("0.5 Hz"); break;
     // case MLX90640_1_HZ: Serial.println("1 Hz"); break;
     // case MLX90640_2_HZ: Serial.println("2 Hz"); break;
@@ -125,7 +126,7 @@ void MLX90640_Show(uint8_t json) {
 
     if (json) {
         ResponseAppend_P(PSTR(",\"MLX90640\":{\"max_temp\":\"%s F\", \"temperatures\":%s}"), max_temp_str, result);
-        MqttPublishPrefixTopic_P(TELE, mqtt_data);
+        MqttPublishPrefixTopic_P(RESULT_OR_TELE, mqtt_data);
     }
 #ifdef USE_WEBSERVER
     else {
