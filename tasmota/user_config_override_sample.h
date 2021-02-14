@@ -1,7 +1,7 @@
 /*
   user_config_override.h - user configuration overrides my_user_config.h for Tasmota
 
-  Copyright (C) 2020  Theo Arends
+  Copyright (C) 2021  Theo Arends
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -28,10 +28,7 @@
  *   To modify the stock configuration without changing the my_user_config.h file:
  *   (1) copy this file to "user_config_override.h" (It will be ignored by Git)
  *   (2) define your own settings below
- *   (3) for platformio:
- *         All done.
- *       for Arduino IDE:
- *         enable define USE_CONFIG_OVERRIDE in my_user_config.h
+ *
  ******************************************************************************************************
  * ATTENTION:
  *   - Changes to SECTION1 PARAMETER defines will only override flash settings if you change define CFG_HOLDER.
@@ -72,17 +69,17 @@ Examples :
 
 #ifdef MY_IP
 #undef  WIFI_IP_ADDRESS
-#define WIFI_IP_ADDRESS   MY_IP                  // Set to 0.0.0.0 for using DHCP or enter a static IP address
+#define WIFI_IP_ADDRESS     MY_IP                // Set to 0.0.0.0 for using DHCP or enter a static IP address
 #endif
 
 #ifdef MY_GW
 #undef  WIFI_GATEWAY
-#define WIFI_GATEWAY      MY_GW                  // if not using DHCP set Gateway IP address
+#define WIFI_GATEWAY        MY_GW                // if not using DHCP set Gateway IP address
 #endif
 
 #ifdef MY_DNS
 #undef  WIFI_DNS
-#define WIFI_DNS          MY_DNS                 // If not using DHCP set DNS IP address (might be equal to WIFI_GATEWAY)
+#define WIFI_DNS            MY_DNS               // If not using DHCP set DNS IP address (might be equal to WIFI_GATEWAY)
 #endif
 
 */

@@ -1,7 +1,7 @@
 /*
   support_light_list.ino - Lightweight Linked List for simple objects - optimized for low code size and low memory
 
-  Copyright (C) 2020  Theo Arends and Stephan Hadinger
+  Copyright (C) 2021  Theo Arends and Stephan Hadinger
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -18,9 +18,9 @@
 */
 
 /*********************************************************************************************\
- * 
+ *
  * private class for Linked List element
- * 
+ *
 \*********************************************************************************************/
 template <typename T>
 class LList;
@@ -43,9 +43,9 @@ protected:
 };
 
 /*********************************************************************************************\
- * 
+ *
  * Lightweight Linked List - optimized for low code size
- * 
+ *
 \*********************************************************************************************/
 template <typename T>
 class LList {
@@ -72,6 +72,10 @@ public:
   T & addHead(void);
   T & addHead(const T &val);
   T & addToLast(void);
+  // add an element allocated externally
+  // memory is free by us now -- don't free it!
+  T & addHead(LList_elt<T> * elt);
+  T & addToLast(LList_elt<T> * elt);
 
   // iterator
   // see https://stackoverflow.com/questions/8164567/how-to-make-my-custom-type-to-work-with-range-based-for-loops
@@ -109,7 +113,7 @@ protected:
 template <typename T>
 size_t LList<T>::length(void) const {
   size_t count = 0;
-  for (auto & elt : *this) {count++; }
+  for (auto & elt : *this) { (void)elt; count++; }
   return count;
 }
 
@@ -175,6 +179,13 @@ T & LList<T>::addHead(const T &val) {
 }
 
 template <typename T>
+T & LList<T>::addHead(LList_elt<T> * elt) {
+  elt->next(_head);      // insert at the head
+  _head = elt;
+  return elt->_val;
+}
+
+template <typename T>
 T & LList<T>::addToLast(void) {
   LList_elt<T> **curr_ptr = &_head;
   while (*curr_ptr) {
@@ -182,5 +193,16 @@ T & LList<T>::addToLast(void) {
   }
   LList_elt<T> * elt = new LList_elt<T>();  // create element
   *curr_ptr = elt;
+  return elt->_val;
+}
+
+template <typename T>
+T & LList<T>::addToLast(LList_elt<T> * elt) {
+  LList_elt<T> **curr_ptr = &_head;
+  while (*curr_ptr) {
+    curr_ptr = &((*curr_ptr)->_next);
+  }
+  *curr_ptr = elt;
+  elt->_next = nullptr;
   return elt->_val;
 }

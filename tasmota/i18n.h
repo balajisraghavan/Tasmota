@@ -1,7 +1,7 @@
 /*
   i18n.h - internationalization for Tasmota
 
-  Copyright (C) 2020  Theo Arends
+  Copyright (C) 2021  Theo Arends
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -37,13 +37,16 @@
 #define D_JSON_BAUDRATE "Baudrate"
 #define D_JSON_BLINK "Blink"
 #define D_JSON_BLOCKED_LOOP "Blocked Loop"
+#define D_JSON_BLUE "Blue"
 #define D_JSON_BOOTVERSION "Boot"
 #define D_JSON_BOOTCOUNT "BootCount"
 #define D_JSON_BSSID "BSSId"
+#define D_JSON_BUTTON "Button"
 #define D_JSON_BUILDDATETIME "BuildDateTime"
 #define D_JSON_CHANNEL "Channel"
 #define D_JSON_CO2 "CarbonDioxide"
 #define D_JSON_COMMAND "Command"
+#define D_JSON_CONFIDENCE "Confidence"
 #define D_JSON_CONFIG_HOLDER "CfgHolder"
 #define D_JSON_CONNECT_FAILED "Connect failed"
 #define D_JSON_COREVERSION "Core"
@@ -53,10 +56,12 @@
 #define D_JSON_DARKNESS "Darkness"
 #define D_JSON_DATA "Data"
 #define D_JSON_DEWPOINT "DewPoint"
+#define D_JSON_DO "DisolvedOxygen"
 #define D_JSON_DISTANCE "Distance"
 #define D_JSON_DNSSERVER "DNSServer"
 #define D_JSON_DONE "Done"
 #define D_JSON_DOWNTIME "Downtime"
+#define D_JSON_EC "EC"
 #define D_JSON_ECO2 "eCO2"
 #define D_JSON_EMPTY "Empty"
 #define D_JSON_ENDDST "EndDST"           // End Daylight Savings Time
@@ -68,6 +73,7 @@
 #define D_JSON_EXPORT "Export"
 #define D_JSON_EXPORT_ACTIVE "ExportActive"
 #define D_JSON_EXPORT_REACTIVE "ExportReactive"
+#define D_JSON_EXPORT_POWER "ExportPower"
 #define D_JSON_FAILED "Failed"
 #define D_JSON_FALLBACKTOPIC "FallbackTopic"
 #define D_JSON_FEATURES "Features"
@@ -80,6 +86,7 @@
 #define D_JSON_FROM "from"
 #define D_JSON_GAS "Gas"
 #define D_JSON_GATEWAY "Gateway"
+#define D_JSON_GREEN "Green"
 #define D_JSON_GROUPS "Groups"
 #define D_JSON_HALTING "Halting"
 #define D_JSON_HEAPSIZE "Heap"
@@ -93,6 +100,7 @@
 #define D_JSON_ID "Id"
 #define D_JSON_ILLUMINANCE "Illuminance"
 #define D_JSON_IMPORT_ACTIVE "ImportActive"
+#define D_JSON_IMPORT_POWER "ImportPower"
 #define D_JSON_IMPORT_REACTIVE "ImportReactive"
 #define D_JSON_INFRARED "Infrared"
 #define D_JSON_UNKNOWN "Unknown"
@@ -111,7 +119,10 @@
 #define D_JSON_NOISE "Noise"
 #define D_JSON_NONE "None"
 #define D_JSON_OR "or"
+#define D_JSON_ORP "ORP"
+#define D_JSON_O2 "Oxygen"
 #define D_JSON_PERIOD "Period"
+#define D_JSON_PH "pH"
 #define D_JSON_PHASE_ANGLE "PhaseAngle"
 #define D_JSON_POWERFACTOR "Factor"
 #define D_JSON_POWERUSAGE "Power"
@@ -127,6 +138,8 @@
 #define D_JSON_PROGRAMSIZE "ProgramSize"
 #define D_JSON_PSRMAXMEMORY "PsrMax"
 #define D_JSON_PSRFREEMEMORY "PsrFree"
+#define D_JSON_PUMP "Pumped"
+#define D_JSON_RED "Red"
 #define D_JSON_REFERENCETEMPERATURE "ReferenceTemperature"
 #define D_JSON_REMAINING "Remaining"
 #define D_JSON_RESET "Reset"
@@ -145,6 +158,7 @@
 #define D_JSON_SERIALRECEIVED "SerialReceived"
 #define D_JSON_SET "Set"
 #define D_JSON_SIGNAL "Signal"
+#define D_JSON_SIZE "Size"
 #define D_JSON_SPEED "Speed"
 #define D_JSON_SPEED_UNIT "SpeedUnit"
 #define D_JSON_SSID "SSId"
@@ -169,6 +183,7 @@
 #define D_JSON_TOTAL_START_TIME "TotalStartTime"
 #define D_JSON_TVOC "TVOC"
 #define D_JSON_TYPE "Type"
+#define D_JSON_UID "UID"
 #define D_JSON_UPTIME "Uptime"
 #define D_JSON_UTC_TIME "UTC"
 #define D_JSON_UV_INDEX "UvIndex"
@@ -178,6 +193,7 @@
 #define D_JSON_VCC "Vcc"
 #define D_JSON_VERSION "Version"
 #define D_JSON_VOLTAGE "Voltage"
+#define D_JSON_VOLUME "Volume"
 #define D_JSON_WEIGHT "Weight"
 #define D_JSON_WIFI "Wifi"
 #define D_JSON_WRONG "Wrong"
@@ -192,6 +208,7 @@
 #define D_JSON_PV2_POWER "Pv2Power"
 #define D_JSON_SOLAR_POWER "SolarPower"
 #define D_JSON_USAGE "Usage"
+#define D_JSON_IMPORT "Import"
 #define D_JSON_EXPORT "Export"
 #define D_JSON_TOTAL_ACTIVE "TotalActive"
 
@@ -211,6 +228,7 @@
 // Commands tasmota.ino
 #define D_CMND_BACKLOG "Backlog"
 #define D_CMND_DELAY "Delay"
+#define D_CMND_NODELAY "NoDelay"
 #define D_CMND_STATUS "Status"
   #define D_STATUS1_PARAMETER "PRM"
   #define D_STATUS2_FIRMWARE "FWR"
@@ -258,6 +276,7 @@
 #define D_CMND_PWMRANGE "PWMRange"
 #define D_CMND_BUTTONDEBOUNCE "ButtonDebounce"
 #define D_CMND_SWITCHDEBOUNCE "SwitchDebounce"
+#define D_CMND_SWITCHTEXT "SwitchText"
 #define D_CMND_SLEEP "Sleep"
 #define D_CMND_UPLOAD "Upload"
 #define D_CMND_UPGRADE "Upgrade"
@@ -311,6 +330,7 @@
 #define D_CMND_DEVGROUP_SEND "DevGroupSend"
 #define D_CMND_DEVGROUP_SHARE "DevGroupShare"
 #define D_CMND_DEVGROUPSTATUS "DevGroupStatus"
+#define D_CMND_DEVGROUP_DEVICE "DevGroupTie"
 #define D_CMND_SERIALSEND "SerialSend"
 #define D_CMND_SERIALDELIMITER "SerialDelimiter"
 #define D_CMND_BAUDRATE "Baudrate"
@@ -330,9 +350,13 @@
 #define D_CMND_TOUCH_THRES "TouchThres"
 #define D_CMND_TOUCH_NUM "TouchNum"
 #define D_CMND_CPU_FREQUENCY "CpuFrequency"
-#endif //ESP32
+#endif  // ESP32
 
-// Commands xdrv_01_mqtt.ino
+// Commands xdrv_02_mqtt.ino
+#define D_SO_MQTTJSONONLY "MqttJSONOnly"
+#define D_SO_MQTTTLS "MqttTLS"
+#define D_SO_MQTTNORETAIN "MqttNoRetain"
+#define D_SO_MQTTDETACHRELAY "MqttDetachRelay"
 #define D_CMND_MQTTLOG "MqttLog"
 #define D_CMND_MQTTHOST "MqttHost"
 #define D_CMND_MQTTPORT "MqttPort"
@@ -358,7 +382,7 @@
 #define D_CMND_SENSORRETAIN "SensorRetain"
 #define D_CMND_PUBLISH "Publish"
 
-// Commands xdrv_02_webserver.ino
+// Commands xdrv_01_webserver.ino
 #define D_CMND_WEBSERVER "Webserver"
   #define D_JSON_WEBSERVER_MODE "WebServerMode"
   #define D_JSON_ACTIVE_FOR "Active for"
@@ -403,12 +427,22 @@
   #define D_JSON_MAXENERGYREACHED "MaxEnergyReached"
 
 // Commands xdrv_04_light.ino
+#define D_SO_CHANNELREMAP "ChannelRemap"    // SO37
+#define D_SO_MULTIPWM "MultiPWM"            // SO68
+#define D_SO_ALEXACTRANGE "AlexaCTRange"    // SO82
+#define D_SO_POWERONFADE "PowerOnFade"      // SO91
+#define D_SO_PWMCT "PWMCT"                  // SO92
+#define D_SO_WHITEBLEND "WhiteBlend"        // SO105
+#define D_SO_VIRTUALCT "VirtualCT"          // SO106
 #define D_CMND_CHANNEL "Channel"
 #define D_CMND_COLOR "Color"
 #define D_CMND_COLORTEMPERATURE "CT"
 #define D_CMND_DIMMER "Dimmer"
 #define D_CMND_DIMMER_RANGE "DimmerRange"
+#define D_CMND_DIMMER_STEP "DimmerStep"
 #define D_CMND_HSBCOLOR "HSBColor"
+#define D_CMND_VIRTUALCT "VirtualCT"
+#define D_CMND_CTRANGE "CTRange"
 #define D_CMND_LED "Led"
 #define D_CMND_LEDTABLE "LedTable"
 #define D_CMND_FADE "Fade"
@@ -457,6 +491,10 @@
   #define D_JSON_IRHVAC_CLEAN "Clean"
   #define D_JSON_IRHVAC_SLEEP "Sleep"
   #define D_JSON_IRHVAC_CLOCK "Clock"
+  #define D_JSON_IRHVAC_STATE_MODE "StateMode"
+    #define D_JSON_IRHVAC_STATE_MODE_SEND_ONLY "SendOnly"
+    #define D_JSON_IRHVAC_STATE_MODE_STORE_ONLY "StoreOnly"
+    #define D_JSON_IRHVAC_STATE_MODE_SEND_STORE "SendStore"
 #define D_JSON_IRRECEIVED "IrReceived"
 
 // Commands xdrv_06_snfbridge.ino
@@ -496,18 +534,23 @@
 #define D_CMND_LATITUDE "Latitude"
 #define D_CMND_LONGITUDE "Longitude"
 
-// Commands xdrv_16_tuyadimmer.ino
-#define D_CMND_TUYA_MCU "TuyaMCU"
-#define D_CMND_TUYA_MCU_SEND_STATE "TuyaSend"
-#define D_JSON_TUYA_MCU_RECEIVED "TuyaReceived"
-
 // Commands xdrv_23_zigbee.ino
 #define D_PRFX_ZB "Zb"
-#define D_ZIGBEE_NOT_STARTED "Zigbee not started"
+#define D_SO_ZIGBEE_NAMEKEY "NameKey"
+#define D_SO_ZIGBEE_DEVICETOPIC "DeviceTopic"
+#define D_SO_ZIGBEE_NOPREFIX "NoPrefix"
+#define D_SO_ZIGBEE_ENDPOINTSUFFIX "EndpointSuffix"
+#define D_SO_ZIGBEE_NOAUTOBIND "NoAutoBind"
+#define D_SO_ZIGBEE_NAMETOPIC "NameTopic"
+#define D_SO_ZIGBEE_ENDPOINTTOPIC "EndpointTopic"
+#define D_SO_ZIGBEE_NOAUTOQUERY "NoAutoQuery"
+#define D_SO_ZIGBEE_ZBRECEIVEDTOPIC "ReceivedTopic"
+#define D_SO_ZIGBEE_OMITDEVICE "OmitDevice"
 #define D_CMND_ZIGBEE_PERMITJOIN "PermitJoin"
 #define D_CMND_ZIGBEE_STATUS "Status"
 #define D_CMND_ZIGBEE_RESET "Reset"
   #define D_JSON_ZIGBEE_CC2530 "CC2530"
+  #define D_JSON_ZIGBEE_EZSP "EZSP"
 #define D_CMND_ZIGBEEZNPRECEIVE "ZNPReceive"      // only for debug
 #define D_CMND_ZIGBEE_EZSP_RECEIVE "EZSPReceive"      // only for debug
 #define D_CMND_ZIGBEE_EZSP_RECEIVE_RAW "EZSPReceiveRaw"      // only for debug
@@ -532,6 +575,7 @@
   #define D_JSON_ZIGBEE_MODELID "ModelId"
 #define D_CMND_ZIGBEE_PROBE "Probe"
 #define D_CMND_ZIGBEE_FORGET "Forget"
+#define D_CMND_ZIGBEE_INFO "Info"
 #define D_CMND_ZIGBEE_SAVE "Save"
   #define D_CMND_ZIGBEE_LINKQUALITY "LinkQuality"
   #define D_CMND_ZIGBEE_CLUSTER "Cluster"
@@ -548,12 +592,16 @@
 #define D_CMND_ZIGBEE_RESPONSE "Response"
   #define D_JSON_ZIGBEE_ZCL_SENT "ZbZCLSent"
 #define D_JSON_ZIGBEE_RECEIVED "ZbReceived"
+#define D_JSON_ZIGBEE_INFO "ZbInfo"
 #define D_CMND_ZIGBEE_BIND "Bind"
   #define D_JSON_ZIGBEE_BIND "ZbBind"
 #define D_CMND_ZIGBEE_UNBIND "Unbind"
   #define D_JSON_ZIGBEE_UNBIND "ZbUnbind"
 #define D_CMND_ZIGBEE_BIND_STATE "BindState"
   #define D_JSON_ZIGBEE_BIND_STATE "ZbBindState"
+#define D_CMND_ZIGBEE_LEAVE "Leave"
+#define D_CMND_ZIGBEE_MAP "Map"
+  #define D_JSON_ZIGBEE_MAP "ZbMap"
 #define D_JSON_ZIGBEE_PARENT "ZbParent"
 #define D_CMND_ZIGBEE_PING "Ping"
   #define D_JSON_ZIGBEE_PING "ZbPing"
@@ -564,9 +612,14 @@
   #define D_JSON_ZIGBEE_STATUS_MSG "StatusMessage"
 #define D_CMND_ZIGBEE_LIGHT "Light"
   #define D_JSON_ZIGBEE_LIGHT "Light"
+#define D_CMND_ZIGBEE_OCCUPANCY "Occupancy"
+  #define D_JSON_ZIGBEE_OCCUPANCY "Occupancy"
 #define D_CMND_ZIGBEE_RESTORE "Restore"
 #define D_CMND_ZIGBEE_CONFIG "Config"
   #define D_JSON_ZIGBEE_CONFIG "Config"
+#define D_CMND_ZIGBEE_DATA "Data"
+#define D_CMND_ZIGBEE_SCAN "Scan"
+  #define D_JSON_ZIGBEE_SCAN "ZbScan"
 
 // Commands xdrv_25_A4988_Stepper.ino
 #define D_CMND_MOTOR "MOTOR"
@@ -585,10 +638,12 @@
 #define D_CMND_SHUTTER_TOGGLEDIR "ToggleDir"
 #define D_CMND_SHUTTER_UP "Up"
 #define D_CMND_SHUTTER_DOWN "Down"
+#define D_CMND_SHUTTER_MODE "Mode"
 #define D_CMND_SHUTTER_STOPOPEN "StopOpen"
 #define D_CMND_SHUTTER_STOPCLOSE "StopClose"
 #define D_CMND_SHUTTER_STOPTOGGLE "StopToggle"
 #define D_CMND_SHUTTER_STOPTOGGLEDIR "StopToggleDir"
+#define D_CMND_SHUTTER_INCDEC "Change"
 #define D_CMND_SHUTTER_STOPPOSITION "StopPosition"
 #define D_CMND_SHUTTER_STOP "Stop"
 #define D_CMND_SHUTTER_POSITION "Position"
@@ -606,6 +661,7 @@
 #define D_CMND_SHUTTER_LOCK "Lock"
 #define D_CMND_SHUTTER_ENABLEENDSTOPTIME "EnableEndStopTime"
 #define D_CMND_SHUTTER_INVERTWEBBUTTONS "InvertWebButtons"
+#define D_CMND_SHUTTER_PWMRANGE "PWMRange"
 
 // Commands xdrv_32_hotplug.ino
 #define D_CMND_HOTPLUG "HotPlug"
@@ -613,11 +669,18 @@
 // Commands xdrv_34_pwm_dimmer.ino
 #ifdef USE_PWM_DIMMER
 #define D_CMND_BRI_PRESET "BriPreset"
+#define D_CMND_PWM_DIMMER_PWMS "PWMDimmerPWMs"
 #endif
 
 // Commands xdrv_38_ping.ino
 #define D_CMND_PING "Ping"
 #define D_JSON_PING "Ping"
+
+// Commands xdrv_52_berry.ino - Berry scripting language
+#define D_PRFX_BR "Br"
+#define D_CMND_BR_RUN ""
+#define D_CMND_BR_RESET "Reset"
+#define D_BR_NOT_STARTED  "Berry not started"
 
 // Commands xsns_02_analog.ino
 #define D_CMND_ADCPARAM "AdcParam"
@@ -650,7 +713,7 @@
 #define D_LOG_KNX "KNX: "
 #define D_LOG_LOG "LOG: "          // Logging
 #define D_LOG_MODULE "MOD: "       // Module
-#define D_LOG_MDNS "DNS: "         // mDNS
+#define D_LOG_MDNS "mDN: "         // mDNS
 #define D_LOG_MQTT "MQT: "         // MQTT
 #define D_LOG_OTHER "OTH: "        // Other
 #define D_LOG_RESULT "RSL: "       // Result
@@ -662,6 +725,7 @@
 #define D_LOG_WIFI "WIF: "         // Wifi
 #define D_LOG_ZIGBEE "ZIG: "       // Zigbee
 #define D_LOG_TCP "TCP: "          // TCP bridge
+#define D_LOG_BERRY "BRY: "        // Berry scripting language
 
 /********************************************************************************************/
 
@@ -697,7 +761,6 @@ const char S_JSON_COMMAND_INDEX_NVALUE[] PROGMEM =            "{\"%s%d\":%d}";
 const char S_JSON_COMMAND_INDEX_LVALUE[] PROGMEM =            "{\"%s%d\":%lu}";
 const char S_JSON_COMMAND_INDEX_SVALUE[] PROGMEM =            "{\"%s%d\":\"%s\"}";
 const char S_JSON_COMMAND_INDEX_ASTERISK[] PROGMEM =          "{\"%s%d\":\"" D_ASTERISK_PWD "\"}";
-const char S_JSON_COMMAND_INDEX_SVALUE_SVALUE[] PROGMEM =     "{\"%s%d\":\"%s%s\"}";
 
 const char S_JSON_SENSOR_INDEX_NVALUE[] PROGMEM =             "{\"" D_CMND_SENSOR "%d\":%d}";
 const char S_JSON_SENSOR_INDEX_SVALUE[] PROGMEM =             "{\"" D_CMND_SENSOR "%d\":\"%s\"}";
@@ -705,6 +768,9 @@ const char S_JSON_SENSOR_INDEX_SVALUE[] PROGMEM =             "{\"" D_CMND_SENSO
 const char S_JSON_DRIVER_INDEX_NVALUE[] PROGMEM =             "{\"" D_CMND_DRIVER "%d\":%d}";
 const char S_JSON_DRIVER_INDEX_SVALUE[] PROGMEM =             "{\"" D_CMND_DRIVER "%d\":\"%s\"}";
 
+const char S_JSON_SVALUE_ACTION_SVALUE[] PROGMEM =            "{\"%s\":{\"Action\":\"%s\"}}";
+
+const char JSON_SNS_F_TEMP[] PROGMEM = ",\"%s\":{\"" D_JSON_TEMPERATURE "\":%*_f}";
 const char JSON_SNS_TEMP[] PROGMEM = ",\"%s\":{\"" D_JSON_TEMPERATURE "\":%s}";
 
 const char JSON_SNS_ILLUMINANCE[] PROGMEM = ",\"%s\":{\"" D_JSON_ILLUMINANCE "\":%d}";
@@ -715,14 +781,11 @@ const char JSON_SNS_GNGPM[] PROGMEM = ",\"%s\":{\"" D_JSON_TOTAL_USAGE "\":%s,\"
 
 const char S_LOG_I2C_FOUND_AT[] PROGMEM = D_LOG_I2C "%s " D_FOUND_AT " 0x%x";
 
-const char S_LOG_HTTP[] PROGMEM = D_LOG_HTTP;
-const char S_LOG_WIFI[] PROGMEM = D_LOG_WIFI;
-const char S_LOG_MQTT[] PROGMEM = D_LOG_MQTT;
 const char S_RSLT_POWER[] PROGMEM = D_RSLT_POWER;
 const char S_RSLT_RESULT[] PROGMEM = D_RSLT_RESULT;
 const char S_RSLT_WARNING[] PROGMEM = D_RSLT_WARNING;
 const char S_LWT[] PROGMEM = D_LWT;
-const char S_OFFLINE[] PROGMEM = D_OFFLINE;
+const char S_LWT_OFFLINE[] PROGMEM = MQTT_LWT_OFFLINE;
 
 // support.ino
 static const char kMonthNames[] = D_MONTH3LIST;
@@ -740,7 +803,9 @@ const float kSpeedConversionFactor[] = {1,            // none
 // xdrv_02_webserver.ino
 #ifdef USE_WEBSERVER
 // {s} = <tr><th>, {m} = </th><td>, {e} = </td></tr>
-const char HTTP_SNS_TEMP[]          PROGMEM = "{s}%s "  D_TEMPERATURE         "{m}%s " D_UNIT_DEGREE            "%c{e}";
+const char HTTP_SNS_F_TEMP[]        PROGMEM = "{s}%s "  D_TEMPERATURE         "{m}%*_f " D_UNIT_DEGREE            "%c{e}";
+//const char HTTP_SNS_TEMP[]          PROGMEM = "{s}%s "  D_TEMPERATURE         "{m}%s " D_UNIT_DEGREE            "%c{e}";
+
 const char HTTP_SNS_HUM[]           PROGMEM = "{s}%s "  D_HUMIDITY            "{m}%s " D_UNIT_PERCENT             "{e}";
 const char HTTP_SNS_DEW[]           PROGMEM = "{s}%s "  D_DEWPOINT            "{m}%s " D_UNIT_DEGREE            "%c{e}";
 const char HTTP_SNS_PRESSURE[]      PROGMEM = "{s}%s "  D_PRESSURE            "{m}%s "                          "%s{e}";
@@ -753,30 +818,22 @@ const char HTTP_SNS_GALLONS[]       PROGMEM = "{s}%s "  D_TOTAL_USAGE         "{
 const char HTTP_SNS_GPM[]           PROGMEM = "{s}%s "  D_FLOW_RATE           "{m}%s " D_UNIT_GALLONS_PER_MIN     "{e}";
 const char HTTP_SNS_MOISTURE[]      PROGMEM = "{s}%s "  D_MOISTURE            "{m}%d " D_UNIT_PERCENT             "{e}";
 const char HTTP_SNS_RANGE[]         PROGMEM = "{s}%s "  D_RANGE               "{m}%d"                             "{e}";
+const char HTTP_SNS_DISTANCE[]      PROGMEM = "{s}%s "  D_DISTANCE            "{m}%d " D_UNIT_MILLIMETER          "{e}";
 const char HTTP_SNS_VOLTAGE[]       PROGMEM = "{s}"     D_VOLTAGE             "{m}%s " D_UNIT_VOLT                "{e}";
 const char HTTP_SNS_CURRENT[]       PROGMEM = "{s}"     D_CURRENT             "{m}%s " D_UNIT_AMPERE              "{e}";
 const char HTTP_SNS_POWER[]         PROGMEM = "{s}"     D_POWERUSAGE          "{m}%s " D_UNIT_WATT                "{e}";
 const char HTTP_SNS_ENERGY_TOTAL[]  PROGMEM = "{s}"     D_ENERGY_TOTAL        "{m}%s " D_UNIT_KILOWATTHOUR        "{e}";
-
-const char S_MAIN_MENU[]              PROGMEM = D_MAIN_MENU;
-const char S_CONFIGURATION[]          PROGMEM = D_CONFIGURATION;
-const char S_CONFIGURE_TEMPLATE[]     PROGMEM = D_CONFIGURE_TEMPLATE;
-const char S_CONFIGURE_MODULE[]       PROGMEM = D_CONFIGURE_MODULE;
-const char S_CONFIGURE_WIFI[]         PROGMEM = D_CONFIGURE_WIFI;
-const char S_NO_NETWORKS_FOUND[]      PROGMEM = D_NO_NETWORKS_FOUND;
-const char S_CONFIGURE_LOGGING[]      PROGMEM = D_CONFIGURE_LOGGING;
-const char S_CONFIGURE_OTHER[]        PROGMEM = D_CONFIGURE_OTHER;
-const char S_SAVE_CONFIGURATION[]     PROGMEM = D_SAVE_CONFIGURATION;
-const char S_RESET_CONFIGURATION[]    PROGMEM = D_RESET_CONFIGURATION;
-const char S_RESTORE_CONFIGURATION[]  PROGMEM = D_RESTORE_CONFIGURATION;
-const char S_FIRMWARE_UPGRADE[]       PROGMEM = D_FIRMWARE_UPGRADE;
-const char S_CONSOLE[]                PROGMEM = D_CONSOLE;
-const char S_INFORMATION[]            PROGMEM = D_INFORMATION;
-const char S_RESTART[]                PROGMEM = D_RESTART;
+const char HTTP_SNS_PH[]            PROGMEM = "{s}%s "  D_PH                  "{m}%s "                            "{e}";
+const char HTTP_SNS_ORP[]           PROGMEM = "{s}%s "  D_ORP                 "{m}%s " D_UNIT_MILLIVOLT           "{e}";
+const char HTTP_SNS_EC[]            PROGMEM = "{s}%s "  D_EC                  "{m}%s " D_UNIT_MICROSIEMENS_PER_CM "{e}";
+const char HTTP_SNS_O2[]            PROGMEM = "{s}%s "  D_O2                  "{m}%s " D_UNIT_PERCENT             "{e}";
+const char HTTP_SNS_LITERS[]        PROGMEM = "{s}%s "  D_VOLUME              "{m}%s " D_UNIT_LITERS              "{e}";
+const char HTTP_SNS_LPM[]           PROGMEM = "{s}%s "  D_FLOW_RATE           "{m}%s " D_UNIT_LITERS_PER_MIN      "{e}";
+const char HTTP_SNS_DO[]            PROGMEM = "{s}%s "  D_DO                  "{m}%s " D_UNIT_PARTS_PER_MILLION   "{e}";
+const char HTTP_SNS_COLOR_RED[]     PROGMEM = "{s}%s "  D_COLOR_RED           "{m}%u "                            "{e}";
+const char HTTP_SNS_COLOR_GREEN[]   PROGMEM = "{s}%s "  D_COLOR_GREEN         "{m}%u "                            "{e}";
+const char HTTP_SNS_COLOR_BLUE[]    PROGMEM = "{s}%s "  D_COLOR_BLUE          "{m}%u "                            "{e}";
+const char HTTP_SNS_MILLILITERS[]   PROGMEM = "{s}%s "  D_VOLUME              "{m}%s " D_UNIT_MILLILITERS         "{e}";
 #endif  // USE_WEBSERVER
-
-const uint32_t MARKER_START = 0x5AA55AA5;
-const uint32_t MARKER_END = 0xA55AA55A;
-const uint32_t VERSION_MARKER[] PROGMEM = { MARKER_START, VERSION, MARKER_END };
 
 #endif  // _I18N_H_
